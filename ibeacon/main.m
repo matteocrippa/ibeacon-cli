@@ -32,7 +32,7 @@ void print_usage() {
     printf("      -i  --interval         Time interval in seconds\n");
     printf("\n");
     printf("    Broadcast options:\n");
-    printf("      -i  --uuid             Proximity UUID\n");
+    printf("      -u  --uuid             Proximity UUID\n");
     printf("      -M  --major            Major Identifier\n");
     printf("      -m  --minor            Minor Identifier\n");
     printf("      -p  --power            Advertised Power\n");
