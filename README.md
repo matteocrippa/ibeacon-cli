@@ -16,7 +16,7 @@ ibeacon: iBeacon command line utility
       -i  --interval         Time interval in seconds
 
     Broadcast options:
-      -i  --uuid             Proximity UUID
+      -u  --uuid             Proximity UUID
       -M  --major            Major Identifier
       -m  --minor            Minor Identifier
       -p  --power            Advertised Power
