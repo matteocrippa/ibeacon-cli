@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B54325BC190AE98800666A1B /* Open Build Folder in Terminal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B54325BF190AE98800666A1B /* Build configuration list for PBXAggregateTarget "Open Build Folder in Terminal" */;
+			buildPhases = (
+				B54325C2190AE99300666A1B /* ShellScript */,
+			);
+			dependencies = (
+				B54325C1190AE99000666A1B /* PBXTargetDependency */,
+			);
+			name = "Open Build Folder in Terminal";
+			productName = "Open Build Folder in Terminal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		B531297718CDF6D70061DC89 /* Broadcaster.m in Sources */ = {isa = PBXBuildFile; fileRef = B531297618CDF6D70061DC89 /* Broadcaster.m */; };
 		B591DC6718CDF0620059945B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591DC6618CDF0620059945B /* Foundation.framework */; };
@@ -15,6 +30,16 @@
 		B591DC7B18CDF1070059945B /* ScanItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B591DC7818CDF1070059945B /* ScanItem.m */; };
 		B591DC7C18CDF1070059945B /* Scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B591DC7A18CDF1070059945B /* Scanner.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B54325C0190AE99000666A1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B591DC5B18CDF0620059945B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B591DC6218CDF0620059945B;
+			remoteInfo = ibeacon;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B591DC6118CDF0620059945B /* CopyFiles */ = {
@@ -152,11 +177,25 @@
 			projectRoot = "";
 			targets = (
 				B591DC6218CDF0620059945B /* ibeacon */,
+				B54325BC190AE98800666A1B /* Open Build Folder in Terminal */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B54325C2190AE99300666A1B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "osascript -e 'tell application \"Terminal\" to activate' -e 'tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down' -e \"tell application \\\"Terminal\\\" to do script \\\"cd $BUILT_PRODUCTS_DIR\\\" in selected tab of the front window\" -e \"tell application \\\"Terminal\\\" to do script \\\"ibeacon --help\\\" in selected tab of the front window\"\n";
+		};
 		B5CEA9E218D27D4000E2F5C4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,7 +225,29 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B54325C1190AE99000666A1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B591DC6218CDF0620059945B /* ibeacon */;
+			targetProxy = B54325C0190AE99000666A1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B54325BD190AE98800666A1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B54325BE190AE98800666A1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		B591DC6F18CDF0620059945B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -276,6 +337,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B54325BF190AE98800666A1B /* Build configuration list for PBXAggregateTarget "Open Build Folder in Terminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B54325BD190AE98800666A1B /* Debug */,
+				B54325BE190AE98800666A1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B591DC5E18CDF0620059945B /* Build configuration list for PBXProject "ibeacon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
