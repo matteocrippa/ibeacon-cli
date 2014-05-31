@@ -22,6 +22,25 @@ ibeacon: iBeacon command line utility
       -p  --power            Advertised Power
 ```
 
+### Build
+Import into Xcode from git or local copy:
+TODO:
+
+Build and testing with command line arugment:
+e.g.
+Open Product>Scheme>Edit Scheme>
+under Arguments tab of one of default schemes, add value to "Arguements Passed On lauch"
+
+in this case, use "--scan"
+
+Then open a iBeacon source, wait for commandline prompt:
+{ranged: []} // no iBeacon signal was picked up.
+{exited: { uuid: "60E967DE-BEBA-40AF-A695-07285976B938", major: 0, minor: 0, rssi: 0, power: -57 }} // a valid sample
+
+### Install
+Open >Window>Organizer:
+Archive your project, you will get a folder looks like: ~/User/Name/Desktop/ibeacon 31-5-14 2.51 pm
+cd to the folder, then copy it into your file system: sudo cp -r ./usr/ /usr/
 
 ### Examples
 

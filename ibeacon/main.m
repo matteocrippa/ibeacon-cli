@@ -10,7 +10,9 @@
 #import "Scanner.h"
 #import "Broadcaster.h"
 #import "Macros.h"
-#import "GeneratedVersion.h"
+//#import "GeneratedVersion.h"
+// Could not find file:"GeneratedVersion.h", define directively below
+#define VERSION "1.0.0" // version number according to author's document.
 
 static void sigint(const int signum) {
     printf("\n");
@@ -41,6 +43,7 @@ void print_usage() {
 
 int main(int argc, char * argv[]) {
     int exit_value = EXIT_SUCCESS;
+    printf("ibeacon program started, version: %s\n", VERSION);
 
     @autoreleasepool {
         signal(SIGINT, sigint);
