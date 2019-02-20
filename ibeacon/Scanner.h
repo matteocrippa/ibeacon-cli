@@ -4,6 +4,7 @@
 
 #import <Foundation/Foundation.h>
 #import <IOBluetooth/IOBluetooth.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
 @interface Scanner : NSObject <CBCentralManagerDelegate>
 
