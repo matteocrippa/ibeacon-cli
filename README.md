@@ -5,7 +5,7 @@ Swiss Army Command Line Utility for working with iBeacons.
 ## Install
 
 ```
-brew tap hayashi311/ibeacon
+brew tap matteocrippa/ibeacon
 brew install ibeacon
 ```
 
